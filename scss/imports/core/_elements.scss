@@ -1,0 +1,148 @@
+//css button, title, icon, elements...
+// .btnmore {
+//   display: inline-flex;
+//   font-family: pb;
+//   text-decoration: none;
+//   @include text(14px, pb, 58px, $text-black-cl, uppercase);
+//   letter-spacing: 2.8px;
+//   position: relative;
+//   &::before {
+//     @include line(40px, 3px, $yellow-cl);
+//     left: 0;
+//     bottom: -10px;
+//   }
+
+//   &:hover {
+//     img {
+//       @include transform(translateX(5px));
+//       @include transition($t);
+//     }
+//   }
+// }
+.btnmain {
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  margin: 0 auto;
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  transition-delay: 0.35s;
+  transform: translateY(50px);
+
+  &:hover {
+    background-color: $yellow-cl;
+    transition: 0.3s;
+  }
+  i {
+    margin-left: 12px;
+  }
+  @include xs {
+    padding: 10px 20px;
+  }
+  &.--info {
+    margin: 0 0;
+  }
+  .icon-play {
+    width: 20px;
+    margin-right: 10px;
+  }
+}
+.btmmore {
+  font-family: pb;
+  @include text(14px, pb, 58px, $text-blue-cl, uppercase);
+  letter-spacing: 2px;
+  position: relative;
+  text-decoration: none;
+  @include transition($t);
+  img {
+    margin-left: 10px;
+  }
+  &:before {
+    content: "";
+    width: 35px;
+    height: 2px;
+    background: $yellow-cl;
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    @include transform(translateX(0px));
+    @include transition($t);
+  }
+  img {
+    position: relative;
+    @include transform(translateX(0px));
+    @include transition($t);
+  }
+  &:hover {
+    img {
+      @include transform(translateX(10px));
+      @include transition($t);
+    }
+  }
+}
+
+.slider {
+  .slider__item-wrap {
+    .slider__item {
+      &.is-selected {
+        .slider__item-text {
+          .btnmain {
+            opacity: 1;
+            visibility: visible;
+            transition: 0.3s;
+            transition-delay: 0.35s;
+            transform: translateY(0px);
+          }
+        }
+      }
+    }
+  }
+}
+.info {
+  .container {
+    .btnmain {
+      border: 1px solid #fff;
+      padding: 12px 34px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      width: max-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 1px;
+      margin: 0 auto;
+      cursor: pointer;
+      opacity: 1;
+      visibility: visible;
+      &:hover {
+        background-color: $yellow-cl;
+        transition: 0.5s;
+      }
+      i {
+        margin-left: 12px;
+      }
+      @include xs {
+        padding: 10px 20px;
+      }
+      &.--info {
+        margin: 0 0;
+      }
+      .icon-play {
+        width: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

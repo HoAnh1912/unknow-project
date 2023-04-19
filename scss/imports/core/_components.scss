@@ -1,0 +1,91 @@
+// //css components
+.textbox {
+  --pText: 100px;
+  --pRight: 20px;
+  padding-left: var(--pText);
+  padding-top: 80px;
+  padding-right: var(--pRight);
+  .titlemain {
+    @include text(40px, pb, $line-height, $text-blue-cl, uppercase);
+    // letter-spacing: 2.8px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    &:before {
+      content: "";
+      width: 80px;
+      height: 2px;
+      background: #555;
+      display: inline-block;
+      // top: 50%;
+      position: absolute;
+      margin-left: -80px;
+      left: -20px;
+    }
+    &.--yellow {
+      color: $yellow-cl;
+      line-height: initial;
+    }
+    &.--white {
+      color: $white-cl;
+    }
+  }
+  .des {
+    padding: 14px 0 28px 0;
+    color: $text-cl;
+    line-height: 26px;
+    &.--white {
+      color: $white-cl;
+    }
+  }
+  &.--textright {
+    text-align: right;
+    padding-left: 0;
+    padding-right: var(--pText);
+    padding-left: var(--pRight);
+    .titlemain {
+      flex-direction: row-reverse;
+      &:before {
+        margin-left: initial;
+        left: initial;
+        margin-right: -80px;
+        right: -20px;
+      }
+    }
+  }
+  &.--textcenter {
+    max-width: 460px;
+    margin: auto;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    text-align: center;
+    .titlemain {
+      flex-direction: column-reverse;
+      &:before {
+        width: 40px;
+        margin: 10px auto;
+        left: initial;
+        right: initial;
+        background-color: $yellow-cl;
+      }
+    }
+  }
+  @include sm {
+    --pText: 0px;
+    --pRight: 20px;
+    padding-left: var(--pText);
+    padding-top: 20px;
+    padding-right: var(--pRight);
+    .titlemain {
+      &:before {
+        display: none;
+      }
+    }
+  }
+  @include xs {
+    .titlemain {
+      font-size: 32px;
+    }
+  }
+}
