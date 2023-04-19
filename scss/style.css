@@ -2364,6 +2364,7 @@ footer .background-footer img {
 .mainwrapper-homepage .contract {
   background: linear-gradient(270deg, rgba(34, 153, 196, 0.1) 0%, rgba(34, 153, 196, 0.5) 55.21%, rgba(34, 153, 196, 0.1) 100%);
   position: relative;
+  margin-bottom: 80px;
 }
 .mainwrapper-homepage .contract::before {
   content: "";
@@ -2429,7 +2430,7 @@ footer .background-footer img {
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0;
+  top: -10%;
 }
 .mainwrapper-homepage .map .map-wrapper .img-wrapper .info-number .block-number:not(:last-child) {
   margin-right: 76px;

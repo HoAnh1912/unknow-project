@@ -139,6 +139,7 @@
       rgba(34, 153, 196, 0.1) 100%
     );
     position: relative;
+    margin-bottom: 80px;
     &::before {
       content: "";
       position: absolute;
@@ -208,7 +209,7 @@
           align-items: center;
           justify-content: center;
           position: absolute;
-          top: 0;
+          top: -10%;
           .block-number {
             &:not(:last-child) {
               margin-right: 76px;
