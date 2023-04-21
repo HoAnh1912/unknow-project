@@ -397,13 +397,14 @@
     }
     .benefit-wrapper {
       display: flex;
-      align-items: end;
+      align-items: start;
       justify-content: space-between;
       gap: 60px;
       .block {
         .img-wrapper {
           max-width: 630px;
           position: relative;
+          height: 560px;
           img {
             width: -webkit-fill-available;
           }
@@ -427,7 +428,6 @@
   }
   .tokenomics {
     position: relative;
-
     .tolenomics-outside {
       display: flex;
       position: relative;
