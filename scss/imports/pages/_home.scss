@@ -1,6 +1,7 @@
 .mainwrapper-homepage {
   .hero {
     position: relative;
+    padding-top: 94px;
     /* ---- reset ---- */
     body {
       margin: 0;
@@ -16,14 +17,14 @@
       height: 100%;
       object-fit: cover;
       overflow: hidden;
-      background-color: #090e25;
+      // background-color: #090e25;
       background-image: url("");
       background-repeat: no-repeat;
       background-size: 20%;
       background-position: 50% 50%;
     } /* ---- stats.js ---- */
     .count-particles {
-      background: #000022;
+      // background: #000022;
       position: absolute;
       top: 48px;
       left: 0;
@@ -115,6 +116,18 @@
         position: relative;
         .img-polygon {
           position: relative;
+          &::after {
+            content: "";
+            width: 400px;
+            height: 400px;
+            background: #07509c;
+            filter: blur(200px);
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+          }
         }
         .info {
           position: absolute;
@@ -170,12 +183,24 @@
             box-shadow: $box-shadow;
             border-radius: 8px;
             cursor: pointer;
+            display: inline-flex;
+
             &:hover {
               background: $bg-liner-hover;
               transition: 0.4s;
             }
           }
         }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: rgb(7, 80, 156);
+        filter: blur(250px);
+        left: -25%;
+        transform: translateY(-25%);
       }
     }
   }
@@ -188,16 +213,7 @@
     );
     position: relative;
     margin-bottom: 80px;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      // left: -208px;
-      background: #07509c;
-      filter: blur(250px);
-      transform: translateY(-30%);
-    }
+
     .contract-block {
       display: flex;
       align-items: center;
@@ -205,30 +221,33 @@
       padding: 24px 0;
       .block {
         display: flex;
-        flex-direction: column;
         justify-content: center;
         &:not(:last-child) {
-          border-right: 1px solid #81cce894;
-          padding-right: 100px;
-          height: 100px;
-          &:not(:first-child) {
-            padding-left: 100px;
+          &::after {
+            content: url(/img/line.png);
+            padding: 0 92px;
           }
         }
         &.--address {
           .des {
             padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            span {
+              margin-left: 8px;
+              cursor: pointer;
+              margin-top: 0;
+            }
           }
           span {
             font-weight: 400;
             font-size: 14px;
             line-height: 17px;
             color: #abbbc2;
-            margin-top: 12px;
           }
         }
         &.--symbol {
-          padding-left: 100px;
+          // padding-left: 100px;
         }
         .title {
           font-weight: 400;
@@ -258,6 +277,7 @@
           justify-content: center;
           position: absolute;
           top: -10%;
+          text-align: center;
           .block-number {
             &:not(:last-child) {
               margin-right: 76px;
@@ -281,6 +301,14 @@
     }
   }
   .mockup {
+    position: relative;
+    h1 {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 58px;
+      text-align: center;
+      padding-bottom: 56px;
+    }
     .block__mockup {
       display: flex;
       align-items: center;
@@ -333,48 +361,164 @@
         }
       }
     }
-    .earn {
-      &::after {
-        content: "";
-        position: absolute;
-        width: 400px;
-        height: 400px;
-        right: 0px;
-        background: #07509c;
-        filter: blur(250px);
-        transform: translateY(-50%);
-        z-index: -1;
-      }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      right: 0px;
+      background: #07509c;
+      filter: blur(250px);
+      top: 20%;
     }
-  }
-  .tokenomics {
-    position: relative;
     &::before {
       content: "";
       position: absolute;
       width: 400px;
       height: 400px;
-      // left: -208px;
       background: #07509c;
       filter: blur(250px);
       transform: translateY(-30%);
+      left: 0;
+      bottom: 5%;
     }
-    .tokenomics-wrapper {
-      h1 {
-        font-weight: 600;
-        font-size: 48px;
-        line-height: 58px;
-        text-align: center;
-        padding-bottom: 24px;
-      }
-      .chart-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-        position: relative;
+  }
+  .benefit {
+    h1 {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 58px;
+      text-align: center;
+      padding-bottom: 40px;
+    }
+    .benefit-wrapper {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 60px;
+      .block {
+        .img-wrapper {
+          max-width: 630px;
+          position: relative;
+          img {
+            width: -webkit-fill-available;
+          }
+        }
+        .content {
+          h1 {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 38px;
+            text-align: left;
+          }
+          p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            color: #abbbc2;
+          }
+        }
       }
     }
+  }
+  .tokenomics {
+    position: relative;
+
+    .tolenomics-outside {
+      display: flex;
+      position: relative;
+      .tokenomics-wrapper {
+        h1 {
+          font-weight: 600;
+          font-size: 48px;
+          line-height: 58px;
+          text-align: center;
+          padding-bottom: 38px;
+        }
+        .content {
+          display: flex;
+          .chart-wrapper {
+            left: 0;
+            z-index: 1;
+            position: relative;
+          }
+          .vesting {
+            flex-shrink: 0;
+            margin-right: calc(-50vw - -50%);
+            position: relative;
+            width: 50vw;
+            .title {
+              font-weight: 600;
+              font-size: 32px;
+              line-height: 38px;
+              padding-bottom: 16px;
+            }
+            .block {
+            }
+          }
+        }
+      }
+      .vesting {
+        position: absolute;
+        top: 63%;
+        right: 0px;
+        transform: translateY(-63%);
+        width: 386px;
+
+        .title {
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 38px;
+          padding-bottom: 16px;
+        }
+        .block {
+          h3 {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            &::after {
+              content: "";
+              width: 100%;
+              height: 1px;
+              display: block;
+              background: rgba(40, 191, 191, 1);
+              margin-left: 8px;
+            }
+          }
+          p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: #abbbc2;
+            margin-top: 8px;
+          }
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+          &.--not-line {
+            ::after {
+              display: none;
+            }
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 400px;
+          height: 400px;
+          right: 0px;
+          background: #07509c;
+          filter: blur(250px);
+          transform: translateY(-180%);
+          z-index: -1;
+        }
+      }
+    }
+
     .background {
       position: absolute;
       top: 50%;
@@ -388,16 +532,6 @@
   .roadmmap {
     position: relative;
     margin-bottom: 200px;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      right: 0px;
-      background: #07509c;
-      filter: blur(250px);
-      transform: translateY(-60%);
-    }
 
     .roadmmap-wrapper {
       h1 {

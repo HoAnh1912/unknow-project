@@ -88,7 +88,7 @@ body {
     @include visible;
     section {
       &.pd {
-        padding: var(--pdSection);
+        margin: var(--pdSection);
 
         @include xs {
           --pdSection: 70px 0;

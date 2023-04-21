@@ -38,7 +38,20 @@
             <img src="img/logo.svg" alt="Predum" />
           </a>
         </div>
-        <div class="btn-connect">Connect wallet</div>
+        <div class="left">
+          <div class="icon-social">
+            <a href="#">
+              <img src="./img/ic-document.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="./img/ic-twitter.png" alt="" />
+            </a>
+            <a href="#">
+              <img src="./img/ic-telegram.png" alt="" />
+            </a>
+          </div>
+          <div class="btn-connect">Connect wallet</div>
+        </div>
       </div>
     </header>
     <main class="mainwrapper-homepage">
@@ -85,9 +98,9 @@
                 <p class="text">Until whitelist round begins</p>
                 <div class="price">
                   <p class="label">Price</p>
-                  <p><span>1</span>$PRD = <span> $0.001</span> USDT</p>
+                  <p><span>1</span>$PRD = <span> $0.05</span> USDT</p>
                 </div>
-                <div class="btn-buy">Connect & Buy PRD Now</div>
+                <div class="btn-buy">Buy PRD Now</div>
               </div>
             </div>
           </div>
@@ -97,24 +110,36 @@
         <div class="container">
           <div class="contract-block">
             <div class="block --address">
-              <p class="title">Contract Address</p>
-              <p class="des">0x7D60dE2E7D92Cbxxx863bC82f8xxxb37c59fC0</p>
-              <span>
-                Please note that you should not send any tokens to this address,
-                as doing so may result in the permanent loss of the tokens
-              </span>
+              <div>
+                <p class="title">Contract Address</p>
+                <p class="des">
+                  0x7D60dE2E7D92Cbxxx863bC82f8xxxb37c59fC0
+                  <span><img src="./img/ic-copy.svg" alt="" /></span>
+                </p>
+                <span>
+                  Please note that you should not send any tokens to this
+                  address, as doing so may result in the permanent loss of the
+                  tokens
+                </span>
+              </div>
             </div>
             <div class="block --decimal">
-              <p class="title">Decimal</p>
-              <p class="des">18</p>
+              <div>
+                <p class="title">Decimal</p>
+                <p class="des">18</p>
+              </div>
             </div>
             <div class="block --network">
-              <p class="title">Network</p>
-              <p class="des">Arbitrum One</p>
+              <div>
+                <p class="title">Network</p>
+                <p class="des">Arbitrum One</p>
+              </div>
             </div>
             <div class="block --symbol">
-              <p class="title">Symbol</p>
-              <p class="des">$PRD</p>
+              <div>
+                <p class="title">Symbol</p>
+                <p class="des">$PRD</p>
+              </div>
             </div>
           </div>
         </div>
@@ -144,6 +169,7 @@
       </section>
       <section class="mockup pd">
         <div class="container">
+          <h1>Outstanding features</h1>
           <div class="block__mockup">
             <img srcset="./img/host.png" alt="" />
             <div class="wrapper-content">
@@ -169,7 +195,7 @@
             </div>
             <img srcset="./img/earn.png" alt="" />
           </div>
-          <div class="block__mockup">
+          <div class="block__mockup nft">
             <img srcset="./img/nft.png" alt="" />
             <div class="wrapper-content">
               <h3>Mint iNFT & invest in Decentralized liquidity pool</h3>
@@ -184,30 +210,88 @@
               <div class="btn-more">Learn more</div>
             </div>
           </div>
-          <div class="block__mockup --right">
-            <div class="wrapper-content">
-              <h3>Staking</h3>
-              <h5>
-                With Predum farms, you can earn PRD rewards by staking single
-                coin, LP tokens (liquidity pool), NFTs and etc. Each farm pool
-                has its own APR depending on the value of the staked token, the
-                reward weight and the price of PRD
-              </h5>
-              <div class="btn-more">Learn more</div>
+        </div>
+      </section>
+      <section class="benefit">
+        <div class="container">
+          <h1>Benefits from Predum</h1>
+          <div class="benefit-wrapper">
+            <div class="block --right">
+              <div class="img-wrapper">
+                <img src="./img/api.png" alt="" />
+              </div>
+              <div class="content">
+                <h1>Predum APIs/SDKs</h1>
+                <p>
+                  Predum’s APIs/SDKs allow other projects to easily create
+                  custom prediction games that align with their product’s goals.
+                  This allows them to add a powerdul feature that can help
+                  increase user engagement and retention. With Predum’s white
+                  label solution, developers can also brand the platform as
+                  their own, ensuring thata their users stay within their
+                  ecosystem.
+                </p>
+              </div>
             </div>
-            <img srcset="./img/staking.png" alt="" />
+            <div class="block --left">
+              <div class="img-wrapper">
+                <img src="./img/tool.png" alt="" />
+              </div>
+              <div class="content">
+                <h1>Predum as a marketing tool</h1>
+                <p>
+                  Predum's prediction games provide a fun and interactive way to
+                  engage, acquire, and retain users/followers. By creating
+                  custom prediction games that align with their branding and
+                  marketing goals, marketers can attract new users and keep
+                  their existing audience engaged.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section class="tokenomics pd">
-        <div class="container">
-          <div class="tokenomics-wrapper">
-            <h1>Tokenomics</h1>
-            <div class="chart-wrapper">
-              <img src="./img/chart.png" alt="" />
+        <div class="tolenomics-outside">
+          <div class="container">
+            <div class="tokenomics-wrapper">
+              <h1>Tokenomics</h1>
+              <div class="content">
+                <div class="chart-wrapper">
+                  <img src="./img/chart.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="vesting">
+            <h3 class="title">Vesting</h3>
+            <div class="block">
+              <h3>Fair launch</h3>
+              <p>100% release at TGE</p>
+            </div>
+            <div class="block">
+              <h3>Escrowed token</h3>
+              <p>100% release at TGE</p>
+            </div>
+            <div class="block">
+              <h3>Partnership/Ambassador</h3>
+              <p>1 month cliff, linear monthly vesting over 2 years</p>
+            </div>
+            <div class="block">
+              <h3>DAO treasury</h3>
+              <p>Reward linear vesting in 5 years</p>
+            </div>
+            <div class="block --not-line">
+              <h3>Community Development/Marketing</h3>
+              <p>Linear monthly vestinf over 5 years</p>
+            </div>
+            <div class="block">
+              <h3>Team</h3>
+              <p>1 year cliff, linear vesting in 5 year</p>
             </div>
           </div>
         </div>
+
         <div class="background">
           <img src="./img/bg-chart.png" alt="" />
         </div>
@@ -232,6 +316,9 @@
             </div>
             <div class="icon-social">
               <a href="#">
+                <img src="./img/ic-document.png" alt="" />
+              </a>
+              <a href="#">
                 <img src="./img/ic-twitter.png" alt="" />
               </a>
               <a href="#">
@@ -241,25 +328,46 @@
           </div>
         </div>
         <hr size="1" />
+        <div class="category-wrapper">
+          <div class="block --host">
+            <h3>Host a prediction</h3>
+            <ul>
+              <li>Staking DAO treasury</li>
+              <li>Decentralized liquidity pool</li>
+              <li>FAQ</li>
+            </ul>
+          </div>
+          <div class="block --join">
+            <h3>Join a prediction</h3>
+            <ul>
+              <li>View prediction history</li>
+              <li>Claim winnings</li>
+              <li>Report fraud</li>
+            </ul>
+          </div>
+        </div>
+        <span class="ic-danger">
+          <img src="./img//ic-danger.svg" alt="" />
+        </span>
         <div class="container">
           <p class="end">
             All visitors must confirm the wagering and/or gambling regulations
             that are applicable in their local jurisdiction (as gambling laws
-            may vary in different states, countries and provinces). EFUN does
+            may vary in different states, countries and provinces). PREDUM does
             not promote or endorse any form of wagering or gambling to users
             under the age of 18.
           </p>
         </div>
+
         <div class="background-footer">
           <img src="./img/bg-footer.png" alt="" />
         </div>
       </footer>
-
       <!-- particles.js container -->
       <div id="particles-js"></div>
       <!-- stats - count particles -->
       <div class="count-particles">
-        <span class="js-count-particles">--</span> particles
+        <span class="js-count-particles"></span>
       </div>
     </main>
     <script type="text/javascript" src="/js/main.js"></script>
