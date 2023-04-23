@@ -96,6 +96,9 @@ body {
         @include xs {
           --pdSection: 70px 0;
         }
+        @include xxs {
+          --pdSection: 28px 0;
+        }
       }
     }
   }

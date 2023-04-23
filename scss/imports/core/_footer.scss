@@ -40,6 +40,9 @@ footer {
         font-size: 18px;
         line-height: 140%;
         padding-bottom: 8px;
+        @include xxs {
+          font-size: 14px;
+        }
       }
       .text-des-gray {
         font-weight: 400;
@@ -51,6 +54,9 @@ footer {
             padding-bottom: 8px;
           }
         }
+        @include xxs {
+          font-size: 14px;
+        }
       }
     }
     .--host {
@@ -58,6 +64,9 @@ footer {
     }
     .--join {
       text-align: left;
+    }
+    @include xxs {
+      gap: 15px;
     }
   }
   .ic-danger {
@@ -74,6 +83,10 @@ footer {
     text-align: center;
     color: #bdbdbd;
     margin-bottom: 24px;
+    @include xxs {
+      font-size: 12px;
+      line-height: 140%;
+    }
   }
   .background-footer {
     position: absolute;
@@ -93,5 +106,8 @@ footer {
     background: #07509c;
     filter: blur(250px);
     transform: translateY(-60%);
+    @include xxs {
+      display: none;
+    }
   }
 }

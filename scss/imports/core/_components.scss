@@ -12,6 +12,10 @@
     background: $bg-liner-hover;
     transition: $t;
   }
+  @include xxs {
+    padding: 9px 20px;
+    font-size: 16px;
+  }
 }
 .button-outline {
   padding: 12.5px 32px;
@@ -33,6 +37,10 @@
   font-size: 48px;
   line-height: 58px;
   text-align: center;
+  @include xxs {
+    font-size: 24px;
+    line-height: 29px;
+  }
 }
 
 .title-block {
@@ -40,6 +48,10 @@
   font-size: 32px;
   line-height: 38px;
   color: $white-cl;
+  @include xxs {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .text-des-20 {
@@ -47,15 +59,27 @@
   font-size: 20px;
   line-height: 24px;
   color: $white-cl;
+  @include xxs {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 .text-des-16 {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: $white-cl;
+  @include xxs {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 .text-des-gray {
   font-weight: 400;
   font-size: 18px;
   color: $text-gray;
+  @include xxs {
+    font-size: 14px;
+  }
 }

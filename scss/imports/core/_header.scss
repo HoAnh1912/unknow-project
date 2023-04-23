@@ -18,8 +18,17 @@ header {
     align-items: center;
     justify-content: space-between;
     .logo {
-      img {
+      .desktop {
         width: 170px;
+        @include xxs {
+          display: none;
+        }
+      }
+      .mobile {
+        display: none;
+        @include xxs {
+          display: block;
+        }
       }
     }
     .left {
@@ -30,6 +39,9 @@ header {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         margin-right: 24px;
+        @include xs {
+          display: none;
+        }
       }
     }
   }
