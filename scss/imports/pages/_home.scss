@@ -89,6 +89,7 @@
             @include md {
               font-size: 52px;
             }
+
             @include xs {
               line-height: 48px;
             }
@@ -474,6 +475,11 @@
         flex-direction: column-reverse;
       }
     }
+    @include xxs {
+      .nft {
+        padding-top: 24px;
+      }
+    }
 
     &::after {
       content: "";
@@ -526,6 +532,19 @@
           @include xxs {
             height: auto;
             margin-top: -20%;
+          }
+          .desktop {
+            display: block;
+            @include xxs {
+              display: none;
+            }
+          }
+
+          .mobile {
+            display: none;
+            @include xxs {
+              display: block;
+            }
           }
         }
         .content {

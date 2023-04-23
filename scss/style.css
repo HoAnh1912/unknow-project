@@ -2696,6 +2696,11 @@ footer::before {
     flex-direction: column-reverse;
   }
 }
+@media (max-width: 576px) {
+  .mainwrapper-homepage .mockup .nft {
+    padding-top: 24px;
+  }
+}
 .mainwrapper-homepage .mockup::after {
   content: "";
   position: absolute;
@@ -2755,6 +2760,22 @@ footer::before {
   .mainwrapper-homepage .benefit .benefit-wrapper .block .img-wrapper {
     height: auto;
     margin-top: -20%;
+  }
+}
+.mainwrapper-homepage .benefit .benefit-wrapper .block .img-wrapper .desktop {
+  display: block;
+}
+@media (max-width: 576px) {
+  .mainwrapper-homepage .benefit .benefit-wrapper .block .img-wrapper .desktop {
+    display: none;
+  }
+}
+.mainwrapper-homepage .benefit .benefit-wrapper .block .img-wrapper .mobile {
+  display: none;
+}
+@media (max-width: 576px) {
+  .mainwrapper-homepage .benefit .benefit-wrapper .block .img-wrapper .mobile {
+    display: block;
   }
 }
 .mainwrapper-homepage .benefit .benefit-wrapper .block .content .title-block {
