@@ -75,6 +75,11 @@
             text-fill-color: transparent;
             text-shadow: $text-shadow;
             span {
+              @include xs {
+                width: 32%;
+                display: inline-block;
+                padding-top: 12px;
+              }
               @include xxs {
                 width: 40%;
                 display: inline-block;
@@ -83,6 +88,9 @@
             }
             @include md {
               font-size: 52px;
+            }
+            @include xs {
+              line-height: 48px;
             }
             @include xxs {
               font-size: 40px;
