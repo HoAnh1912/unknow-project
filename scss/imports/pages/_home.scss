@@ -398,6 +398,9 @@
               line-height: 150%;
             }
           }
+          @include xxs {
+            align-items: start;
+          }
         }
       }
     }
@@ -513,7 +516,7 @@
     h1 {
       padding-bottom: 40px;
       @include xxs {
-        padding-bottom: 24px;
+        padding-bottom: 100px;
       }
     }
     .benefit-wrapper {
