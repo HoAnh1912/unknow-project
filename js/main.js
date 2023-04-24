@@ -1,5 +1,4 @@
-
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener("DOMContentLoaded", (event) => {
   /* ---- particles.js config ---- */
   particlesJS("particles-js", {
     particles: {
@@ -56,7 +55,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     },
     retina_detect: true,
   });
-
 });
 var count_particles, stats, update;
 stats = new Stats();
@@ -75,4 +73,3 @@ update = function () {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);
-

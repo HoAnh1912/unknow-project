@@ -8,7 +8,8 @@ header {
   left: 0px;
   z-index: 300;
   transition: 0.3s;
-  &.active {
+  height: 94px;
+  &.bg-active {
     background: #000;
     transition: 0.3s;
   }
@@ -44,5 +45,9 @@ header {
         }
       }
     }
+  }
+  &.active {
+    background: #090e25;
+    transition: 0.3s;
   }
 }

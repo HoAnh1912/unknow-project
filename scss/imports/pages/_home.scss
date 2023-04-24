@@ -75,19 +75,24 @@
             text-fill-color: transparent;
             text-shadow: $text-shadow;
             span {
+              @include md {
+                width: 40%;
+                display: inline-block;
+              }
               @include xs {
                 width: 32%;
                 display: inline-block;
                 padding-top: 12px;
               }
               @include xxs {
-                width: 40%;
+                width: 32%;
                 display: inline-block;
                 padding-top: 12px;
               }
             }
             @include md {
-              font-size: 52px;
+              font-size: 56px;
+              line-height: 68px;
             }
 
             @include xs {
@@ -105,7 +110,7 @@
             padding-bottom: 8px;
           }
           @include xxs {
-            padding: 12px 0 24px;
+            padding: 12px 0 28px;
           }
         }
         .button-wrapper {
@@ -113,14 +118,7 @@
           .--launch {
             margin-right: 16px;
           }
-          .button-outline {
-            &:hover {
-              color: $text-cl;
-              background: $bg-liner;
-              box-shadow: $box-shadow;
-              transition: 0.4s;
-            }
-          }
+
           @include xs {
             align-items: center;
             justify-content: center;
@@ -129,6 +127,10 @@
         @include xs {
           position: relative;
           margin-top: -10%;
+        }
+        @include xxs {
+          position: relative;
+          margin-top: -5%;
         }
       }
       .right {
@@ -160,6 +162,7 @@
             }
             .mobile {
               display: block;
+              width: 100%;
             }
           }
         }
@@ -236,8 +239,8 @@
             left: 48%;
           }
           @include xxs {
-            top: 45%;
-            left: 48%;
+            top: 48%;
+            left: 50%;
           }
         }
         @include md {
@@ -297,10 +300,10 @@
             content: url(/img/line.png);
             padding: 0 92px;
             @include md {
-              padding: 0 70px;
+              padding: 0 36px;
             }
-            @include md {
-              padding: 0 40px;
+            @include xs {
+              padding: 0 70px;
             }
             @include xxs {
               content: url(/img/line-mobile.png);
@@ -348,6 +351,11 @@
             line-height: 24px;
           }
         }
+        .--network {
+          .text-des-20 {
+            white-space: nowrap;
+          }
+        }
       }
       @include xs {
         flex-direction: column;
@@ -372,7 +380,9 @@
         @include mid(true);
         position: relative;
         .info-number {
-          @include mid(true);
+          display: flex;
+          align-items: start;
+          justify-content: center;
           position: absolute;
           top: -10%;
           text-align: center;
@@ -387,19 +397,29 @@
               text-shadow: $text-shadow;
               color: $text-blue-cl;
               padding-bottom: 16px;
+              @include xs {
+                font-size: 32px;
+                line-height: 29px;
+              }
               @include xxs {
                 font-size: 24px;
                 line-height: 29px;
               }
             }
+          }
+          @include xs {
+            .text-des-20 {
+              font-size: 16px;
+              line-height: 150%;
+            }
+          }
+
+          @include xxs {
             .text-des-20 {
               font-weight: 400;
               font-size: 12px;
               line-height: 150%;
             }
-          }
-          @include xxs {
-            align-items: start;
           }
         }
       }
@@ -426,7 +446,6 @@
       }
       .wrapper-content {
         .text-des-gray {
-          line-height: 130%;
           padding: 16px 0 24px;
           @include xxs {
             padding: 12px 0;
@@ -480,7 +499,7 @@
     }
     @include xxs {
       .nft {
-        padding-top: 24px;
+        padding-top: 3px;
       }
     }
 
@@ -516,7 +535,7 @@
     h1 {
       padding-bottom: 40px;
       @include xxs {
-        padding-bottom: 100px;
+        padding-bottom: 84px;
       }
     }
     .benefit-wrapper {
@@ -545,6 +564,7 @@
 
           .mobile {
             display: none;
+            margin: auto;
             @include xxs {
               display: block;
             }
@@ -557,9 +577,7 @@
               padding-bottom: 12px;
             }
           }
-          .text-des-gray {
-            line-height: 150%;
-          }
+
           @include xs {
             margin-top: 20%;
           }
@@ -574,6 +592,11 @@
       @include xxs {
         .--right {
           padding-bottom: 20px;
+        }
+      }
+      @include xxs {
+        .--left {
+          background-image: url(/img/bg-vesting-mobile.png);
         }
       }
     }
@@ -597,7 +620,7 @@
           .chart-mobile {
             display: none;
           }
-          @include xs {
+          @include xxs {
             .chart-desktop {
               display: none;
             }
@@ -606,55 +629,55 @@
             }
           }
         }
-        .detail-mobile {
-          display: none;
-          @include xs {
-            display: block;
-            .block-detail {
-              display: grid;
-              grid-template-columns: repeat(4, 1fr);
-              column-gap: 16px;
-              align-items: center;
-              &:not(:last-child) {
-                margin-bottom: 12px;
-              }
-              .color {
-                width: 16px;
-                height: 16px;
-                border-radius: 100%;
-              }
-              .text {
-                font-weight: 600;
-                font-size: 14px;
-                line-height: 17px;
-                color: $white-cl;
-              }
-              .--gray {
-                color: $text-gray;
-                font-weight: 400;
-                width: 160px;
-              }
-              .--first {
-                background: #146f8f;
-              }
-              .--second {
-                background: #2299c4;
-              }
-              .--third {
-                background: #6febf0;
-              }
-              .--four {
-                background: #6febf0;
-              }
-              .--five {
-                background: #019688;
-              }
-              .--six {
-                background: #27bdbf;
-              }
-            }
-          }
-        }
+        // .detail-mobile {
+        //   display: none;
+        //   @include xs {
+        //     display: block;
+        //     .block-detail {
+        //       display: grid;
+        //       grid-template-columns: repeat(4, 1fr);
+        //       column-gap: 16px;
+        //       align-items: center;
+        //       &:not(:last-child) {
+        //         margin-bottom: 12px;
+        //       }
+        //       .color {
+        //         width: 16px;
+        //         height: 16px;
+        //         border-radius: 100%;
+        //       }
+        //       .text {
+        //         font-weight: 600;
+        //         font-size: 14px;
+        //         line-height: 17px;
+        //         color: $white-cl;
+        //       }
+        //       .--gray {
+        //         color: $text-gray;
+        //         font-weight: 400;
+        //         width: 160px;
+        //       }
+        //       .--first {
+        //         background: #146f8f;
+        //       }
+        //       .--second {
+        //         background: #2299c4;
+        //       }
+        //       .--third {
+        //         background: #6febf0;
+        //       }
+        //       .--four {
+        //         background: #6febf0;
+        //       }
+        //       .--five {
+        //         background: #019688;
+        //       }
+        //       .--six {
+        //         background: #27bdbf;
+        //       }
+        //     }
+        //   }
+        // }
         .vesting {
           .title-block {
             padding-bottom: 16px;
@@ -693,21 +716,16 @@
             &:not(:last-child) {
               margin-bottom: 16px;
             }
-            &.--not-line {
-              ::after {
-                display: none;
-              }
-            }
           }
           &::after {
             content: "";
             position: absolute;
-            width: 400px;
-            height: 400px;
-            right: 0px;
+            width: 200px;
+            height: 200px;
+            left: 0px;
             background: #07509c;
-            filter: blur(250px);
-            transform: translateY(-180%);
+            filter: blur(125px);
+            transform: translateY(-206%);
           }
           @include xs {
             width: 100%;
@@ -715,6 +733,10 @@
         }
         @include xs {
           flex-direction: column;
+        }
+        @include xxs {
+          gap: 38px;
+          background-image: url(/img/bg-benigit-mobile.png);
         }
       }
     }
@@ -774,19 +796,8 @@
         filter: blur(125px);
         position: absolute;
         top: 0px;
-        left: 65%;
-        transform: translate(-50%, -50%);
-      }
-      &::after {
-        content: "";
-        width: 200px;
-        height: 200px;
-        background: #07509c;
-        filter: blur(125px);
-        position: absolute;
-        top: 45%;
-        left: 0;
-        transform: translate(-50%, -50%);
+        left: 73%;
+        transform: translate(-50%, 100%);
       }
     }
   }

@@ -96,6 +96,18 @@ footer {
     img {
       width: 100%;
     }
+    .mobile {
+      display: none;
+    }
+    @include xxs {
+      bottom: 50%;
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: block;
+      }
+    }
   }
   &::before {
     content: "";
