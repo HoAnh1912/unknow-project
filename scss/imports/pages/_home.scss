@@ -239,7 +239,7 @@
             left: 48%;
           }
           @include xxs {
-            top: 48%;
+            top: 46%;
             left: 50%;
           }
         }
@@ -313,6 +313,9 @@
         }
         .wrap {
           margin: auto;
+        }
+        .text-des-20 {
+          font-weight: 600;
         }
         .text-des-16 {
           margin-bottom: 12px;
@@ -404,6 +407,7 @@
               @include xxs {
                 font-size: 24px;
                 line-height: 29px;
+                padding-bottom: 4px;
               }
             }
           }
@@ -455,6 +459,7 @@
           width: fit-content;
           @include xs {
             margin: auto;
+            display: block;
           }
         }
         .button-more {
@@ -463,12 +468,14 @@
           line-height: 140%;
           color: $main-cl;
           cursor: pointer;
+          text-decoration: none;
           &:hover {
             color: $text-hover;
             transition: $t;
           }
           @include xs {
             text-align: center;
+            display: block;
           }
           @include xxs {
             font-size: 16px;
@@ -589,9 +596,19 @@
       @include xs {
         flex-direction: column;
       }
+      @include xs {
+        .--right {
+          .img-wrapper {
+            right: -20%;
+          }
+        }
+      }
       @include xxs {
         .--right {
           padding-bottom: 20px;
+          .img-wrapper {
+            right: 0;
+          }
         }
       }
       @include xxs {
@@ -708,6 +725,22 @@
               @include xxs {
                 font-size: 16px;
                 line-height: 19px;
+              }
+              span {
+                height: 24px;
+                width: 24px;
+                display: contents;
+                cursor: pointer;
+                img {
+                  margin-left: 4px;
+                }
+                @include xxs {
+                  height: 16px;
+                  width: 16px;
+                  img {
+                    margin-left: 8px;
+                  }
+                }
               }
             }
             .text-des-gray {

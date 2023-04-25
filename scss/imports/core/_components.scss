@@ -8,9 +8,10 @@
   box-shadow: $box-shadow;
   border-radius: 8px;
   cursor: pointer;
+  text-decoration: none;
   &:hover {
-    background: $bg-liner-hover;
-    transition: $t;
+    background: $hover;
+    transition: all $t ease-in-out;
   }
   @include xxs {
     padding: 9px 20px;
@@ -24,6 +25,8 @@
   color: $main-cl;
   border: 1px solid $main-cl;
   border-radius: 8px;
+  text-decoration: none;
+
   &:hover {
     color: $text-cl;
     background: $bg-liner;

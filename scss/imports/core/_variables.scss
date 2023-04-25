@@ -9,12 +9,8 @@ $text-hover: #1796c4;
 $text-cl: #ffffff;
 $text-blue-cl: #27bdbf;
 $text-btn: #3fadd5;
-$bg-liner: linear-gradient(90deg, #28bfbf 0%, rgba(18, 140, 184, 0.99) 100%);
-$bg-liner-hover: linear-gradient(
-  90deg,
-  #197979 0%,
-  rgba(11, 97, 129, 0.99) 100%
-);
+$bg-liner: linear-gradient(90deg, #28bfbf 0%, #128cb8fc 100%);
+$hover: #70c8e8;
 $box-shadow: 0px 0px 12px rgba(34, 153, 196, 0.7);
 $text-shadow: 0px 0px 12px rgba(63, 173, 213, 0.7);
 
