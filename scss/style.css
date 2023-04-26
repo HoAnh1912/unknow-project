@@ -2690,6 +2690,17 @@ footer::before {
     padding-bottom: 0;
   }
 }
+.mainwrapper-homepage .mockup .block__mockup .img-wrapper {
+  width: 50%;
+}
+@media screen and (max-width: 1200px) {
+  .mainwrapper-homepage .mockup .block__mockup .img-wrapper {
+    display: contents;
+  }
+}
+.mainwrapper-homepage .mockup .block__mockup .wrapper-content {
+  width: 50%;
+}
 .mainwrapper-homepage .mockup .block__mockup .wrapper-content .text-des-gray {
   padding: 16px 0 24px;
 }
@@ -2729,6 +2740,11 @@ footer::before {
 @media (max-width: 576px) {
   .mainwrapper-homepage .mockup .block__mockup .wrapper-content .button-more {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mainwrapper-homepage .mockup .block__mockup .wrapper-content {
+    width: 100%;
   }
 }
 @media screen and (max-width: 1200px) {

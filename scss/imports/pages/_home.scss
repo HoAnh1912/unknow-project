@@ -448,7 +448,14 @@
           padding-bottom: 0;
         }
       }
+      .img-wrapper {
+        width: 50%;
+        @include md {
+          display: contents;
+        }
+      }
       .wrapper-content {
+        width: 50%;
         .text-des-gray {
           padding: 16px 0 24px;
           @include xxs {
@@ -480,6 +487,9 @@
           @include xxs {
             font-size: 16px;
           }
+        }
+        @include md {
+          width: 100%;
         }
       }
       @include md {
