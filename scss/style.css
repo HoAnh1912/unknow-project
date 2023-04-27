@@ -2687,7 +2687,7 @@ footer::before {
 }
 @media (max-width: 576px) {
   .mainwrapper-homepage .mockup .block__mockup:not(:last-child) {
-    padding-bottom: 0;
+    padding-bottom: 24px;
   }
 }
 .mainwrapper-homepage .mockup .block__mockup .img-wrapper {
@@ -2767,14 +2767,12 @@ footer::before {
     gap: 12px;
   }
 }
+.mainwrapper-homepage .mockup .earn .img-wrapper img {
+  border-radius: 8px;
+}
 @media screen and (max-width: 820px) {
   .mainwrapper-homepage .mockup .--right {
     flex-direction: column-reverse;
-  }
-}
-@media (max-width: 576px) {
-  .mainwrapper-homepage .mockup .nft {
-    padding-top: 3px;
   }
 }
 .mainwrapper-homepage .mockup::after {

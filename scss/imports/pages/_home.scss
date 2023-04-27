@@ -445,7 +445,7 @@
       &:not(:last-child) {
         padding-bottom: 40px;
         @include xxs {
-          padding-bottom: 0;
+          padding-bottom: 24px;
         }
       }
       .img-wrapper {
@@ -509,14 +509,16 @@
         gap: 12px;
       }
     }
+    .earn {
+      .img-wrapper {
+        img {
+          border-radius: 8px;
+        }
+      }
+    }
     @include xs {
       .--right {
         flex-direction: column-reverse;
-      }
-    }
-    @include xxs {
-      .nft {
-        padding-top: 3px;
       }
     }
 
