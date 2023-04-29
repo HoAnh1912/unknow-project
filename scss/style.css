@@ -2463,7 +2463,7 @@ footer::before {
 @media screen and (max-width: 1200px) {
   .mainwrapper-homepage .hero .hero-wrapper .right .info {
     top: 39%;
-    left: 48%;
+    left: 50%;
   }
 }
 @media (max-width: 576px) {
@@ -3103,7 +3103,8 @@ footer::before {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: -18%;
+  margin-top: -10%;
+  opacity: 0.7;
 }
 #modal-root .modal .logo-modal::before {
   content: "";
@@ -3123,7 +3124,7 @@ footer::before {
   }
 }
 #modal-root .modal .content {
-  margin-top: -15%;
+  margin-top: -8%;
 }
 #modal-root .modal .content .text {
   font-weight: 600;
