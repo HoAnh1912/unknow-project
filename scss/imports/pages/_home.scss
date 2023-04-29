@@ -876,7 +876,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
-      margin-top: -10%;
+      margin-top: -2%;
       opacity: 0.7;
       &::before {
         content: "";
@@ -890,7 +890,7 @@
       @include xxs {
         width: 120px;
         height: 120px;
-        margin: -10% auto -30px;
+        margin: -9% auto -30px;
         z-index: -1;
       }
     }
