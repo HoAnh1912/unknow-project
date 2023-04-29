@@ -43,6 +43,9 @@
             <a href="https://docs.predum.io/" target="_blank">
               <img src="./img/ic-document.svg" alt="" />
             </a>
+            <a href="" target="_blank">
+              <img src="./img/ic-discord.svg" alt="" />
+            </a>
             <a href=" https://twitter.com/predum__io" target="_blank">
               <img src="./img/ic-twitter.svg" alt="" />
             </a>
@@ -54,23 +57,34 @@
         </div>
       </div>
     </header>
+
+    <div id="modal-root">
+      <div class="modal">
+        <span class="logo-modal"
+          ><lottie-player
+            src="https://assets1.lottiefiles.com/packages/lf20_tE1Kmra1Xn.json"
+            background="transparent"
+            speed="1"
+            style="width: 360px; height: 360px"
+            loop
+            autoplay
+          ></lottie-player>
+        </span>
+        <div class="content">
+          <div class="text">
+            Whitelist & Public Sale time will be announced soon
+          </div>
+          <div class="button" id="close-modal">I understand</div>
+        </div>
+      </div>
+    </div>
+
     <main class="mainwrapper-homepage">
       <section class="hero">
         <div id="particles-js"></div>
         <div class="count-particles"></div>
         <div class="container">
           <div class="hero-wrapper">
-            <div class="social-mobile">
-              <a href="https://docs.predum.io/" target="_blank">
-                <img src="./img/ic-document.svg" alt="" />
-              </a>
-              <a href=" https://twitter.com/predum__io" target="_blank">
-                <img src="./img/ic-twitter.svg" alt="" />
-              </a>
-              <a href="https://t.me/predum_community" target="_blank">
-                <img src="./img/ic-telegram.svg" alt="" />
-              </a>
-            </div>
             <div class="left">
               <div class="hero-title">
                 <h1>
@@ -122,8 +136,22 @@
                   <p class="label">Price</p>
                   <p><span>1 </span>ETH<span> = 40,000</span> $PRD</p>
                 </div>
-                <div class="button">Buy PRD Now</div>
+                <div class="button" id="modal-opener">Buy PRD Now</div>
               </div>
+            </div>
+            <div class="social-mobile">
+              <a href="https://docs.predum.io/" target="_blank">
+                <img src="./img/ic-document.svg" alt="" />
+              </a>
+              <a href="" target="_blank">
+                <img src="./img/ic-discord.svg" alt="" />
+              </a>
+              <a href=" https://twitter.com/predum__io" target="_blank">
+                <img src="./img/ic-twitter.svg" alt="" />
+              </a>
+              <a href="https://t.me/predum_community" target="_blank">
+                <img src="./img/ic-telegram.svg" alt="" />
+              </a>
             </div>
           </div>
         </div>
@@ -418,6 +446,9 @@
               <a href="https://docs.predum.io/" target="_blank">
                 <img src="./img/ic-document.svg" alt="" />
               </a>
+              <a href="" target="_blank">
+                <img src="./img/ic-discord.svg" alt="" />
+              </a>
               <a href=" https://twitter.com/predum__io" target="_blank">
                 <img src="./img/ic-twitter.svg" alt="" />
               </a>
@@ -492,6 +523,46 @@
             .classList.remove(className);
         }
       };
+    </script>
+    <!-- Animation waiting -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- Add modal -->
+    <script>
+      window.addEventListener("load", setup);
+
+      const get = document.getElementById.bind(document);
+      const query = document.querySelector.bind(document);
+
+      function setup() {
+        let modalRoot = get("modal-root");
+        let button = get("modal-opener");
+        let modal = query(".modal");
+        let span = get("close-modal");
+
+        modalRoot.addEventListener("click", rootClick);
+        button.addEventListener("click", openModal);
+        modal.addEventListener("click", modalClick);
+        span.addEventListener("click", rootClick);
+
+        function rootClick() {
+          modalRoot.classList.remove("visible");
+        }
+
+        function openModal() {
+          modalRoot.classList.add("visible");
+        }
+
+        function closeModal() {
+          modalRoot.classList.remove("visible");
+        }
+
+        function modalClick(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          e.stopImmediatePropagation();
+          return false;
+        }
+      }
     </script>
   </body>
 </html>

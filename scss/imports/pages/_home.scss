@@ -126,11 +126,10 @@
         }
         @include xs {
           position: relative;
-          margin-top: -10%;
         }
         @include xxs {
           position: relative;
-          margin-top: -5%;
+          margin-top: 20px;
         }
       }
       .right {
@@ -254,7 +253,7 @@
         display: none;
         @include xs {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 20px;
           margin: 24px auto;
         }
@@ -273,7 +272,7 @@
         }
       }
       @include xs {
-        flex-direction: column-reverse;
+        flex-direction: column;
         text-align: center;
       }
     }
@@ -846,4 +845,103 @@
       }
     }
   }
+}
+
+// .modal {
+//   align-items: center;
+//   display: flex;
+//   height: 100%;
+//   justify-content: center;
+//   left: 0;
+//   opacity: 0;
+//   pointer-events: none;
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   z-index: 800;
+//   .modal__overlay {
+//     background-color: #3d3d3d;
+//     height: 100vh;
+//     left: 0;
+//     opacity: 0.9;
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+//     z-index: 700;
+//   }
+// }
+#modal-root {
+  position: fixed;
+  z-index: 999999;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  left: 0;
+  top: 0;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  transition: opacity 0.15s ease-out, width 0s linear 0.15s,
+    height 0s linear 0.15s;
+  .modal {
+    margin: 0 auto;
+    width: 600px;
+    padding: 20px;
+    border-radius: 16px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(/img/img-modal.png) no-repeat #202434;
+    width: 510px;
+    height: 424px;
+    .logo-modal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-top: -18%;
+      &::before {
+        content: "";
+        width: 213px;
+        height: 213px;
+        background: #07509c;
+        opacity: 0.7;
+        filter: blur(100px);
+        position: absolute;
+      }
+      @include xxs {
+        width: 120px;
+        height: 120px;
+        margin: -10% auto -30px;
+      }
+    }
+    .content {
+      margin-top: -15%;
+      .text {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 140%;
+        text-align: center;
+        color: $text-cl;
+      }
+      .button {
+        width: fit-content;
+        margin: auto;
+        margin-top: 24px;
+      }
+      @include xxs {
+        margin-top: 20px;
+      }
+    }
+    @include xxs {
+      width: 343px;
+      height: 260px;
+    }
+  }
+}
+#modal-root.visible {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.15s ease-out;
 }
