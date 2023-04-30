@@ -1,7 +1,6 @@
 // css header
 header {
   width: 100%;
-  max-width: $container-max-width;
   padding: 24px 0;
   position: fixed;
   top: 0;
@@ -9,6 +8,7 @@ header {
   z-index: 300;
   transition: 0.3s;
   height: 94px;
+  right: 0;
   &.bg-active {
     background: #000;
     transition: 0.3s;
@@ -42,6 +42,10 @@ header {
         margin-right: 24px;
         @include xs {
           display: none;
+        }
+        a:hover {
+          transition: 0.3s ease;
+          transform: scale(1.08);
         }
       }
     }
