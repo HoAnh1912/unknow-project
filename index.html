@@ -20,6 +20,7 @@
       http-equiv="Content-Security-Policy"
       content="upgrade-insecure-requests"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="/scss/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -85,7 +86,7 @@
         <div class="count-particles"></div>
         <div class="container">
           <div class="hero-wrapper">
-            <div class="left">
+            <div class="left" data-aos="fade-right">
               <div class="hero-title">
                 <h1>
                   Predictive freedom with
@@ -111,7 +112,7 @@
                 >
               </div>
             </div>
-            <div class="right">
+            <div class="right" data-aos="fade-left">
               <div class="img-polygon">
                 <img class="desktop" src="./img/polygon.png" alt="" />
                 <img class="mobile" src="./img/polygon-mobile.png" alt="" />
@@ -156,7 +157,7 @@
           </div>
         </div>
       </section>
-      <section class="contract">
+      <section class="contract" data-aos="fade-up">
         <div class="container">
           <div class="contract-block">
             <div class="block --address">
@@ -198,7 +199,7 @@
       </section>
       <section class="map pd">
         <div class="container">
-          <div class="map-wrapper">
+          <div class="map-wrapper" data-aos="fade-up">
             <div class="img-wrapper">
               <div class="info-number">
                 <div class="block-number">
@@ -221,12 +222,12 @@
       </section>
       <section class="mockup pd">
         <div class="container">
-          <h1 class="title-section">Outstanding features</h1>
+          <h1 class="title-section" data-aos="fade-up">Outstanding features</h1>
           <div class="block__mockup">
-            <picture class="img-wrapper">
+            <picture class="img-wrapper" data-aos="fade-right">
               <img srcset="./img/host.png" alt="" />
             </picture>
-            <div class="wrapper-content">
+            <div class="wrapper-content" data-aos="fade-left">
               <h3 class="title-block">
                 Want to host a prediction? Predum got you cover
               </h3>
@@ -246,7 +247,7 @@
             </div>
           </div>
           <div class="block__mockup earn --right">
-            <div class="wrapper-content">
+            <div data-aos="fade-right" class="wrapper-content">
               <h3 class="title-block">Earn by making a correct prediction</h3>
               <h5 class="text-des-gray">
                 Confident in your prediction ability? Try various Predum’s
@@ -263,15 +264,15 @@
                 >Predict now</a
               >
             </div>
-            <picture class="img-wrapper"
+            <picture data-aos="fade-left" class="img-wrapper"
               ><img srcset="./img/earn.png" alt=""
             /></picture>
           </div>
           <div class="block__mockup nft">
-            <picture class="img-wrapper"
+            <picture data-aos="fade-right" class="img-wrapper"
               ><img srcset="./img/nft.png" alt=""
             /></picture>
-            <div class="wrapper-content">
+            <div class="wrapper-content" data-aos="fade-left">
               <h3 class="title-block">
                 Mint iNFT & invest in Decentralized liquidity pool
               </h3>
@@ -295,9 +296,9 @@
       </section>
       <section class="benefit">
         <div class="container">
-          <h1 class="title-section">Benefits from Predum</h1>
+          <h1 class="title-section" data-aos="fade-up">Benefits from Predum</h1>
           <div class="benefit-wrapper">
-            <div class="block --right">
+            <div class="block --right" data-aos="fade-right">
               <div class="img-wrapper">
                 <img class="desktop" src="./img/api.png" alt="" />
                 <img class="mobile" src="./img/api-mobile.png" alt="" />
@@ -315,7 +316,7 @@
                 </p>
               </div>
             </div>
-            <div class="block --left">
+            <div class="block --left" data-aos="fade-left">
               <div class="img-wrapper">
                 <img src="./img/tool.png" alt="" />
               </div>
@@ -335,9 +336,9 @@
       </section>
       <section class="tokenomics pd">
         <div class="container">
-          <h1 class="title-section">Tokenomics</h1>
+          <h1 class="title-section" data-aos="fade-up">Tokenomics</h1>
           <div class="tokenomics-wrapper">
-            <div class="chart-wrapper">
+            <div class="chart-wrapper" data-aos="fade-right">
               <img class="chart-desktop" src="./img/chart.png" alt="" />
               <img class="chart-mobile" src="./img/chart-mobile.png" alt="" />
             </div>
@@ -379,7 +380,7 @@
                 <span class="text">10,000,000 PRD</span>
               </div>
             </div> -->
-            <div class="vesting">
+            <div class="vesting" data-aos="fade-left">
               <h3 class="title-block">Vesting</h3>
               <div class="block">
                 <h3>Fair launch</h3>
@@ -426,8 +427,8 @@
       <section class="roadmmap">
         <div class="container">
           <div class="roadmmap-wrapper">
-            <h1 class="title-section">Roadmap</h1>
-            <div class="map-wrapper">
+            <h1 class="title-section" data-aos="fade-up">Roadmap</h1>
+            <div class="map-wrapper" data-aos="fade-up">
               <img class="map-desktop" src="./img/img-roadmap.png" alt="" />
               <img class="map-mobile" src="./img/roadmap-mobile.png" alt="" />
             </div>
@@ -437,12 +438,12 @@
       <footer>
         <div class="container">
           <div class="social-wrapper">
-            <div class="logo">
+            <div class="logo" data-aos="fade-right">
               <a href="#">
                 <img src="img/logo.svg" alt="Predum" />
               </a>
             </div>
-            <div class="icon-social">
+            <div class="icon-social" data-aos="fade-left">
               <a href="https://docs.predum.io/" target="_blank">
                 <img src="./img/ic-document.svg" alt="" />
               </a>
@@ -463,17 +464,29 @@
           <div class="block --host">
             <h3>Host a prediction</h3>
             <ul class="text-des-gray">
-              <li>Staking DAO treasury</li>
-              <li>Decentralized liquidity pool</li>
-              <li>FAQ</li>
+              <li>
+                <a href="#">Staking DAO treasury</a>
+              </li>
+              <li>
+                <a href="#">Decentralized liquidity pool</a>
+              </li>
+              <li>
+                <a href="#">FAQ</a>
+              </li>
             </ul>
           </div>
           <div class="block --join">
             <h3>Join a prediction</h3>
             <ul class="text-des-gray">
-              <li>View prediction history</li>
-              <li>Claim winnings</li>
-              <li>Report fraud</li>
+              <li>
+                <a href="#">View prediction history</a>
+              </li>
+              <li>
+                <a href="#">Claim winnings</a>
+              </li>
+              <li>
+                <a href="#">Report fraud</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -526,6 +539,7 @@
     </script>
     <!-- Animation waiting -->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
     <!-- Add modal -->
     <script>
       window.addEventListener("load", setup);
@@ -563,6 +577,13 @@
           return false;
         }
       }
+    </script>
+    <!-- aos lib -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 500,
+      });
     </script>
   </body>
 </html>
