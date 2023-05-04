@@ -571,12 +571,14 @@
         .img-wrapper {
           max-width: 630px;
           position: relative;
-          // height: 560px;
+          height: 560px;
           @include md {
             // height: 430px;
+            height: auto;
             margin: 0 auto;
           }
           @include xxs {
+            margin-bottom: 20px;
             height: auto;
             margin-top: -20%;
           }
@@ -609,6 +611,9 @@
           @include xxs {
             margin-top: 5%;
           }
+        }
+        @include xxs {
+          margin-bottom: 30px;
         }
       }
       @include xs {
