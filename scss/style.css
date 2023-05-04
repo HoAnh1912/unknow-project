@@ -3390,19 +3390,25 @@ footer::before {
   }
 }
 .mainwrapper-homepage .benefit .benefit-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
   align-items: start;
   justify-content: space-between;
   gap: 60px;
 }
+@media screen and (max-width: 1200px) {
+  .mainwrapper-homepage .benefit .benefit-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .mainwrapper-homepage .benefit .benefit-wrapper .block .img-wrapper {
   max-width: 630px;
   position: relative;
-  height: 560px;
 }
 @media screen and (max-width: 1200px) {
   .mainwrapper-homepage .benefit .benefit-wrapper .block .img-wrapper {
-    height: 430px;
+    margin: 0 auto;
   }
 }
 @media (max-width: 576px) {
@@ -3488,6 +3494,11 @@ footer::before {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 1200px) {
+  .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper {
+    flex-wrap: wrap;
+  }
+}
 .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .chart-wrapper {
   z-index: 1;
   flex: 0 0 70%;
@@ -3495,6 +3506,12 @@ footer::before {
 }
 .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .chart-wrapper .chart-mobile {
   display: none;
+}
+@media screen and (max-width: 1200px) {
+  .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .chart-wrapper {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 @media (max-width: 576px) {
   .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .chart-wrapper .chart-desktop {
@@ -3514,6 +3531,12 @@ footer::before {
 @media (max-width: 576px) {
   .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .vesting .title-block {
     padding-bottom: 18px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .vesting {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .vesting .block {

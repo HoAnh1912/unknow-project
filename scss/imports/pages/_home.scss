@@ -557,17 +557,24 @@
       }
     }
     .benefit-wrapper {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
       align-items: start;
       justify-content: space-between;
       gap: 60px;
+      @include md {
+        display: flex;
+        flex-direction: column;
+      }
+
       .block {
         .img-wrapper {
           max-width: 630px;
           position: relative;
-          height: 560px;
+          // height: 560px;
           @include md {
-            height: 430px;
+            // height: 430px;
+            margin: 0 auto;
           }
           @include xxs {
             height: auto;
@@ -645,12 +652,19 @@
         gap: 60px;
         align-items: center;
         justify-content: space-between;
+        @include md {
+          flex-wrap: wrap;
+        }
         .chart-wrapper {
           z-index: 1;
           flex: 0 0 70%;
           max-width: 70%;
           .chart-mobile {
             display: none;
+          }
+          @include md {
+            flex: 0 0 100%;
+            max-width: 100%;
           }
           @include xxs {
             .chart-desktop {
@@ -713,12 +727,17 @@
         .vesting {
           .title-block {
             padding-bottom: 16px;
+
             @include xxs {
               padding-bottom: 18px;
             }
           }
           flex: 0 0 30%;
           max-width: 30%;
+          @include md {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
           .block {
             position: relative;
             z-index: 20;
