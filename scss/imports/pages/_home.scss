@@ -392,6 +392,11 @@
             &:not(:last-child) {
               margin-right: 76px;
             }
+            @include xxs {
+              &:not(:last-child) {
+                margin-right: 18px;
+              }
+            }
             h1 {
               font-weight: 600;
               font-size: 64px;
