@@ -664,13 +664,39 @@
         gap: 60px;
         align-items: center;
         justify-content: space-between;
-        @include md {
+        @include lg {
           flex-wrap: wrap;
+          justify-content: center;
+          gap: 30px;
         }
         .chart-wrapper {
           z-index: 1;
           flex: 0 0 70%;
           max-width: 70%;
+          .chart-block {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: center;
+            a {
+              color: #3fadd4;
+              font-size: 18px;
+              text-decoration: none;
+              &:hover {
+                text-decoration: underline;
+              }
+              @include lg {
+                margin-top: 6px;
+                font-size: 16px;
+              }
+            }
+            &.chart-block-mobile {
+              display: none;
+              @include xs {
+                display: flex;
+              }
+            }
+          }
           .chart-mobile {
             display: none;
           }
@@ -746,10 +772,11 @@
           }
           flex: 0 0 30%;
           max-width: 30%;
-          @include md {
+          @include lg {
             flex: 0 0 100%;
             max-width: 100%;
           }
+
           .block {
             position: relative;
             z-index: 20;
