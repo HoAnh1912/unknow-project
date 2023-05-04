@@ -3387,7 +3387,7 @@ footer::before {
   }
 }
 .mainwrapper-homepage .benefit h1 {
-  padding-bottom: 40px;
+  padding-bottom: 16px;
 }
 @media (max-width: 576px) {
   .mainwrapper-homepage .benefit h1 {
@@ -3533,6 +3533,7 @@ footer::before {
 }
 .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .chart-wrapper .chart-block a {
   color: #3fadd4;
+  font-weight: 600;
   font-size: 18px;
   text-decoration: none;
 }
@@ -3543,6 +3544,11 @@ footer::before {
   .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .chart-wrapper .chart-block a {
     margin-top: 6px;
     font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .chart-wrapper .chart-block a {
+    font-weight: 400;
   }
 }
 .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .chart-wrapper .chart-block.chart-block-mobile {
