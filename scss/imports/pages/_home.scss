@@ -639,12 +639,16 @@
         }
       }
       .tokenomics-wrapper {
+        position: relative;
+        z-index: 10;
         display: flex;
         gap: 60px;
         align-items: center;
         justify-content: space-between;
         .chart-wrapper {
           z-index: 1;
+          flex: 0 0 70%;
+          max-width: 70%;
           .chart-mobile {
             display: none;
           }
@@ -713,7 +717,11 @@
               padding-bottom: 18px;
             }
           }
+          flex: 0 0 30%;
+          max-width: 30%;
           .block {
+            position: relative;
+            z-index: 20;
             h3 {
               font-weight: 600;
               font-size: 18px;
@@ -764,6 +772,8 @@
           &::after {
             content: "";
             position: absolute;
+            z-index: 0;
+
             width: 200px;
             height: 200px;
             left: 0px;

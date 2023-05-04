@@ -168,8 +168,8 @@ html {
 
 html,
 body {
+  overflow-x: hidden;
   width: 100%;
-  max-width: 1920px;
   margin: auto;
   font-size: 16px;
   font-family: Barlow;
@@ -3481,6 +3481,8 @@ footer::before {
   }
 }
 .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper {
+  position: relative;
+  z-index: 10;
   display: flex;
   gap: 60px;
   align-items: center;
@@ -3488,6 +3490,8 @@ footer::before {
 }
 .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .chart-wrapper {
   z-index: 1;
+  flex: 0 0 70%;
+  max-width: 70%;
 }
 .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .chart-wrapper .chart-mobile {
   display: none;
@@ -3500,6 +3504,10 @@ footer::before {
     display: block;
   }
 }
+.mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .vesting {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
 .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .vesting .title-block {
   padding-bottom: 16px;
 }
@@ -3507,6 +3515,10 @@ footer::before {
   .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .vesting .title-block {
     padding-bottom: 18px;
   }
+}
+.mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .vesting .block {
+  position: relative;
+  z-index: 20;
 }
 .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .vesting .block h3 {
   font-weight: 600;
@@ -3557,6 +3569,7 @@ footer::before {
 .mainwrapper-homepage .tokenomics .container .tokenomics-wrapper .vesting::after {
   content: "";
   position: absolute;
+  z-index: 0;
   width: 200px;
   height: 200px;
   left: 0px;
